@@ -1,0 +1,76 @@
+/* Enable smooth scrolling for navigation */
+html {
+  scroll-behavior: smooth;
+}
+
+/* ================================
+   SCROLL REVEAL ANIMATION
+================================ */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px) scale(0.97);
+}
+
+.reveal-visible {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+  animation: fadeUp 0.8s cubic-bezier(0.22, 1, 0.36, 1) forwards;
+}
+
+/* Optional: stagger animation for sibling elements (premium effect) */
+.reveal:nth-child(1) {
+  animation-delay: 0.1s;
+}
+.reveal:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.reveal:nth-child(3) {
+  animation-delay: 0.3s;
+}
+.reveal:nth-child(4) {
+  animation-delay: 0.4s;
+}
+
+/* Keyframes */
+@keyframes fadeUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px) scale(0.97);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0) scale(1);
+  }
+}
+
+/* ================================
+   HERO SECTION
+================================ */
+.blob {
+  filter: blur(40px);
+  opacity: 0.7;
+}
+
+/* Hero Image — keep proper proportions */
+.hero-photo {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* ================================
+   REDUCED MOTION SUPPORT
+================================ */
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .reveal,
+  .reveal-visible {
+    animation: none !important;
+    opacity: 1 !important;
+    transform: none !important;
+  }
+}

@@ -1,0 +1,617 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Rayda Rosario | IT Student</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <!-- Google Font -->
+    <link
+      href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <!-- Font Awesome -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+      crossorigin="anonymous"
+      referrerpolicy="no-referrer"
+    />
+
+    <!-- Tailwind CDN -->
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+      tailwind.config = {
+        darkMode: 'class',
+        theme: {
+          extend: {
+            fontFamily: {
+              sans: [
+                'Poppins',
+                'system-ui',
+                '-apple-system',
+                'Segoe UI',
+                'sans-serif',
+              ],
+            },
+            colors: {
+              accent: {
+                DEFAULT: '#14b8a6',
+                soft: '#5eead4',
+              },
+            },
+            boxShadow: {
+              glow: '0 0 30px rgba(20,184,166,0.45)',
+            },
+          },
+        },
+      };
+    </script>
+
+    <!-- Custom styles -->
+    <link rel="stylesheet" href="css/styles.css" />
+  </head>
+  <body
+    class="font-sans bg-slate-50 text-slate-800 dark:bg-slate-950 dark:text-slate-100 antialiased"
+  >
+    <!-- NAVBAR -->
+    <header
+      class="fixed top-0 inset-x-0 z-40 border-b border-slate-200/70 dark:border-slate-800/70 bg-white/80 dark:bg-slate-900/75 backdrop-blur-lg"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex items-center justify-between h-16"
+      >
+        <!-- Left: Logo + name -->
+        <a href="#top" class="flex items-center gap-3 group">
+          <div
+            class="h-9 w-9 rounded-xl bg-gradient-to-br from-accent to-cyan-500 flex items-center justify-center text-white font-semibold shadow-glow group-hover:scale-105 transition-transform"
+          >
+            RR
+          </div>
+          <div class="flex flex-col leading-tight">
+            <span class="text-sm font-semibold tracking-wide">Rayda Rosario</span>
+            <span class="text-xs text-slate-500 dark:text-slate-400">
+              IT Student
+            </span>
+          </div>
+        </a>
+
+        <!-- Right: Nav links + theme toggle -->
+        <div class="flex items-center gap-4">
+          <nav class="hidden md:flex items-center gap-2 text-sm font-medium">
+            <a
+              href="#about"
+              class="px-3 py-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >About</a
+            >
+            <a
+              href="#education"
+              class="px-3 py-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >Education</a
+            >
+            <a
+              href="#skills"
+              class="px-3 py-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >Skills</a
+            >
+            <a
+              href="#contact"
+              class="px-3 py-1.5 rounded-full hover:bg-slate-100 dark:hover:bg-slate-800 transition-colors"
+              >Contact</a
+            >
+          </nav>
+
+          <!-- Dark mode toggle -->
+          <button
+            id="theme-toggle"
+            class="inline-flex items-center gap-2 text-xs md:text-sm px-3 py-1.5 rounded-full border border-slate-300/70 dark:border-slate-700/70 bg-white/80 dark:bg-slate-800/80 shadow-sm hover:shadow-md transition-all"
+            type="button"
+            aria-label="Toggle dark mode"
+          >
+            <i
+              id="theme-toggle-icon"
+              class="fa-solid fa-moon text-[0.8rem] text-slate-600 dark:text-amber-300"
+            ></i>
+            <span id="theme-toggle-text" class="hidden sm:inline-block"
+              >Dark</span
+            >
+          </button>
+        </div>
+      </div>
+    </header>
+
+    <!-- MAIN CONTENT -->
+    <main id="top" class="pt-20 md:pt-24">
+      <!-- HERO -->
+      <section
+        class="relative overflow-hidden py-16 sm:py-20 lg:py-24 border-b border-slate-200/60 dark:border-slate-800/60 min-h-[80vh] flex items-center"
+      >
+        <!-- Gradient blobs -->
+        <div class="pointer-events-none absolute inset-0 -z-10">
+          <div
+            class="blob absolute -top-24 -left-12 h-72 w-72 bg-accent/40 dark:bg-accent/30 rounded-full"
+          ></div>
+          <div
+            class="blob absolute top-40 -right-16 h-80 w-80 bg-cyan-400/30 dark:bg-cyan-500/25 rounded-full"
+          ></div>
+          <div
+            class="blob absolute bottom-0 left-1/3 h-64 w-64 bg-indigo-400/20 dark:bg-indigo-500/25 rounded-full"
+          ></div>
+        </div>
+
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 w-full">
+          <div
+            class="grid gap-10 lg:grid-cols-[1.2fr,0.9fr] items-center reveal"
+          >
+            <!-- Text -->
+            <div>
+              <p
+                class="inline-flex items-center gap-2 text-xs font-medium uppercase tracking-[0.15em] text-accent bg-accent/5 dark:bg-accent/15 px-3 py-1 rounded-full mb-4"
+              >
+                <span class="h-1.5 w-1.5 rounded-full bg-accent"></span>
+                IT Student
+              </p>
+              <h1
+                class="text-3xl sm:text-4xl lg:text-5xl font-extrabold tracking-tight mb-3"
+              >
+                Rayda Rosario
+              </h1>
+              <p
+                class="text-base sm:text-lg text-slate-600 dark:text-slate-300 mb-3"
+              >
+                IT Student&nbsp;
+                
+              </p>
+              <p
+                class="text-sm sm:text-base text-slate-500 dark:text-slate-400 mb-6"
+              >
+                 <span class="font-semibold text-accent">2nd Year</span> IT Student of Arellano University Jose Abad Santos Campus
+
+              <!-- CTA buttons -->
+              <div class="flex flex-wrap items-center gap-3 mb-6">
+                <a
+                  href="#education"
+                  class="inline-flex items-center justify-center rounded-full px-5 py-2.5 text-sm font-medium bg-accent text-white shadow-glow hover:scale-[1.02] hover:shadow-lg transition-transform"
+                >
+                  <i class="fa-solid fa-briefcase mr-2"></i>
+                  View Experience
+                </a>
+              </div>
+
+              <!-- Highlight badges -->
+              <div
+                class="grid grid-cols-2 sm:flex sm:flex-wrap gap-3 text-xs sm:text-sm"
+              >
+                <div
+                  class="rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white/70 dark:bg-slate-900/70 px-3 py-2 flex items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all"
+                >
+                  <span
+                    class="h-7 w-7 flex items-center justify-center rounded-lg bg-accent/10 text-accent text-xs"
+                  >
+                    <i class="fa-solid fa-chalkboard-user"></i>
+                  </span>
+                  <span>Grade 1-5 - With Honors</span>
+                </div>
+                <div
+                  class="rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white/70 dark:bg-slate-900/70 px-3 py-2 flex items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all"
+                >
+                  <span
+                    class="h-7 w-7 flex items-center justify-center rounded-lg bg-accent/10 text-accent text-xs"
+                  >
+                    <i class="fa-solid fa-user-graduate"></i>
+                  </span>
+                  <span>Grade 6 - With Honors, Best in Filipino</span>
+                </div>
+                <div
+                  class="rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white/70 dark:bg-slate-900/70 px-3 py-2 flex items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all"
+                >
+                  <span
+                    class="h-7 w-7 flex items-center justify-center rounded-lg bg-accent/10 text-accent text-xs"
+                  >
+                    <i class="fa-solid fa-laptop-code"></i>
+                  </span>
+                  <span>Grade 7, 8 and 10 With Honors</span>
+                </div>
+                <div
+                  class="rounded-xl border border-slate-200/80 dark:border-slate-700/80 bg-white/70 dark:bg-slate-900/70 px-3 py-2 flex items-center gap-2 hover:shadow-md hover:-translate-y-0.5 transition-all"
+                >
+                  <span
+                    class="h-7 w-7 flex items-center justify-center rounded-lg bg-accent/10 text-accent text-xs"
+                  >
+                    <i class="fa-solid fa-cloud"></i>
+                  </span>
+                  <span>Grade 11 - With Honors</span>
+                </div>
+              </div>
+            </div>
+
+            <!-- Hero image card -->
+            <div class="reveal">
+              <div
+                class="relative rounded-3xl border border-slate-200/70 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 shadow-xl shadow-accent/10 p-3 sm:p-4 lg:p-5 backdrop-blur overflow-hidden"
+              >
+                <!-- Glow accent -->
+                <div
+                  class="absolute -top-6 -right-6 h-16 w-16 rounded-3xl bg-gradient-to-br from-accent to-cyan-500 opacity-60 blur-xl"
+                ></div>
+
+                <div class="relative rounded-2xl overflow-hidden">
+                  <img
+                    src="img/portfolio.jpg"
+                    alt="Professional portrait of an IT instructor and technical trainer"
+                    class="hero-photo w-full transform hover:scale-105 transition-transform duration-700"
+                  />
+                </div>
+
+                <div class="mt-4">
+                  <p
+                    class="text-xs uppercase tracking-[0.18em] text-slate-500 mb-1"
+                  >
+                    Professional Profile
+                  </p>
+                  <p class="text-sm text-slate-700 dark:text-slate-200">
+                    I am a dedicated and driven student with a strong academic track record spanning from elementary school to college. Throughout my educational journey, I have consistently demonstrated commitment to excellence, earning honors across various levels of schooling.
+                  </p>
+
+                  <!-- Small badges inside the card (area you pointed to) -->
+                  <div class="mt-3 flex flex-wrap gap-2 text-[11px]">
+                    <span
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-accent/10 text-accent font-medium"
+                    >
+                      <i class="fa-solid fa-chalkboard-user mr-1.5"></i>
+                      2nd Year IT Student
+                    </span>
+                    <span
+                      class="inline-flex items-center rounded-full px-3 py-1 bg-indigo-500/10 text-indigo-400 font-medium"
+                    >
+                      <i class="fa-solid fa-cloud mr-1.5"></i>
+                      Proud Student of AU Jose Abad Santos
+                    </span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- ABOUT -->
+      <section
+        id="about"
+        class="py-14 sm:py-16 lg:py-20 border-t border-slate-200/70 dark:border-slate-800/70"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+          <div class="grid md:grid-cols-[1.7fr,1fr] gap-10 items-start">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold mb-3">About Rayda</h2>
+              <p
+                class="text-sm sm:text-base text-slate-600 dark:text-slate-300 leading-relaxed"
+              >
+              I am a dedicated and driven student with a strong academic track record spanning from elementary school to college. Throughout my educational journey, I have consistently demonstrated commitment to excellence, earning honors across various levels of schooling.
+              Starting from Elementary at Philippians Academy, I graduated with honors, achieving recognition for my performance in Grades 1 to 5, and continuing to excel in Grade 6, where I earned the title of “Best in Filipino.” My high school years at Arandia College saw me achieving honors in Grades 7, 8, and 10, and my Senior High experience at Olivarez College culminated in earning honors during Grade 11.
+              Currently, I am a second-year student in college, where I am proud to continue maintaining high academic standards with honors. These experiences reflect my strong work ethic, passion for learning, and ability to achieve success in a variety of academic subjects.
+              I am eager to leverage these skills and values as I continue my educational and professional journey, and I am committed to furthering my growth in both academic and personal pursuits.
+              </p>
+            </div>
+
+            <!-- Interests -->
+            <div
+              class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 p-5 shadow-md shadow-slate-200/70 dark:shadow-slate-900/70"
+            >
+              <h3
+                class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200"
+              >
+                Beyond the Classroom
+              </h3>
+              <ul class="space-y-3 text-sm text-slate-600 dark:text-slate-300">
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 h-7 w-7 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-xs"
+                  >
+                    <i class="fa-solid fa-mountain"></i>
+                  </span>
+                  <div>
+                    <p
+                      class="font-medium text-xs uppercase tracking-[0.16em] text-slate-500"
+                    >
+                      Leadership Roles in School Organizations
+                    </p>
+                    <p>
+                      Serving in a leadership capacity, such as being a member of a student council, club president, or team captain, demonstrates your ability to manage responsibilities, organize events, and work collaboratively with others.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 h-7 w-7 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-xs"
+                  >
+                    <i class="fa-solid fa-camera-retro"></i>
+                  </span>
+                  <div>
+                    <p
+                      class="font-medium text-xs uppercase tracking-[0.16em] text-slate-500"
+                    >
+                      Community Volunteering & Service Projects
+                    </p>
+                    <p>
+                      Actively participating in community service or volunteer work can showcase your commitment to giving back and making a positive impact outside of academic settings.
+                    </p>
+                  </div>
+                </li>
+                <li class="flex items-start gap-3">
+                  <span
+                    class="mt-1 h-7 w-7 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-xs"
+                  >
+                    <i class="fa-solid fa-graduation-cap"></i>
+                  </span>
+                  <div>
+                    <p
+                      class="font-medium text-xs uppercase tracking-[0.16em] text-slate-500"
+                    >
+                      Public Speaking & Debate
+                    </p>
+                    <p>
+                      Engaging in public speaking or joining a debate club can highlight your communication and persuasion skills.
+                    </p>
+                  </div>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- EDUCATION -->
+      <section
+        id="education"
+        class="py-14 sm:py-16 lg:py-20 border-t border-slate-200/70 dark:border-slate-800/70"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+          <div
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8"
+          >
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold mb-2">
+                Academic Background
+              </h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                2nd Year of IT experience
+              </p>
+            </div>
+          </div>
+          <div class="grid gap-5 md:grid-cols-2">
+            <article
+              class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-5 sm:p-6 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <h3 class="font-semibold text-sm sm:text-base">
+                Senior Highschool - Olivarez College
+              </h3>
+              <p
+                class="text-xs uppercase tracking-[0.18em] text-slate-500 mt-1"
+              >
+                With Honors
+              </p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-2">
+                Completed: April 12, 2012
+              </p>
+            </article>
+
+            <article
+              class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-5 sm:p-6 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <h3 class="font-semibold text-sm sm:text-base">
+                Highschool - Arandia College
+              </h3>
+              <p
+                class="text-xs uppercase tracking-[0.18em] text-slate-500 mt-1"
+              >
+                With Honors
+              </p>
+              <p class="text-xs text-slate-400 dark:text-slate-500 mt-3">
+                Graduated: April 2002
+              </p>
+            </article>
+          </div>
+        </div>
+      </section>
+
+
+
+      <!-- SKILLS -->
+      <section
+        id="skills"
+        class="py-14 sm:py-16 lg:py-20 border-t border-slate-200/70 dark:border-slate-800/70"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+          <div
+            class="flex flex-col sm:flex-row sm:items-end sm:justify-between mb-8"
+          >
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold mb-2">
+                Summary of Skills
+              </h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400">
+                Core strengths as an IT Student and future IT Professional.
+              </p>
+            </div>
+          </div>
+
+          <div class="grid gap-4 md:grid-cols-2">
+            <article
+              class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-4 text-sm flex gap-3 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <div
+                class="flex-shrink-0 h-8 w-8 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-base"
+              >
+                <i class="fa-solid fa-microchip"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">
+                  Academic Excellence & Time Management
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Consistently achieving honors from elementary school through college highlights a strong ability to manage time effectively, prioritize tasks, and meet deadlines under pressure. This skill is essential in both academic and professional environments.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-4 text-sm flex gap-3 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <div
+                class="flex-shrink-0 h-8 w-8 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-base"
+              >
+                <i class="fa-solid fa-comments"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">
+                  Communication & Language Proficiency
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Recognition for "Best in Filipino" reflects strong communication skills, both in writing and speaking. This proficiency enables you to convey ideas clearly, collaborate with others, and present complex information in an accessible manner.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-4 text-sm flex gap-3 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <div
+                class="flex-shrink-0 h-8 w-8 rounded-xl bg-emerald-500/10 text-emerald-500 flex items-center justify-center text-base"
+              >
+                <i class="fa-solid fa-layer-group"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">
+                  Problem-Solving & Critical Thinking
+                </h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Excelling in various subjects across different grade levels demonstrates your ability to think critically, analyze situations, and solve problems efficiently—skills that are highly valued in any professional setting.
+                </p>
+              </div>
+            </article>
+
+            <article
+              class="rounded-2xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/80 p-4 text-sm flex gap-3 hover:-translate-y-0.5 hover:shadow-lg hover:shadow-accent/10 transition-all"
+            >
+              <div
+                class="flex-shrink-0 h-8 w-8 rounded-xl bg-sky-500/10 text-sky-500 flex items-center justify-center text-base"
+              >
+                <i class="fa-solid fa-people-group"></i>
+              </div>
+              <div>
+                <h3 class="font-semibold text-sm">Adaptability & Learning Agility</h3>
+                <p class="text-xs text-slate-500 dark:text-slate-400 mt-1">
+                  Your ability to maintain high performance throughout multiple academic levels (from elementary to college) shows your capacity to adapt to new challenges, learn quickly, and apply knowledge in diverse contexts.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </section>
+
+      <!-- CONTACT -->
+      <section
+        id="contact"
+        class="py-14 sm:py-16 lg:py-20 border-t border-slate-200/70 dark:border-slate-800/70"
+      >
+        <div class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 reveal">
+          <div class="grid gap-10 md:grid-cols-[1.2fr,0.8fr] items-start">
+            <div>
+              <h2 class="text-xl sm:text-2xl font-bold mb-2">Get in Touch</h2>
+              <p class="text-sm text-slate-500 dark:text-slate-400 mb-6">
+                Feel free to reach out if you have any questions or would like to connect. I'd love to hear from you!
+              </p>
+
+              <div class="space-y-4 text-sm">
+                <div class="flex items-start gap-3">
+                  <span
+                    class="mt-1 h-7 w-7 rounded-xl bg-accent/10 text-accent flex items-center justify-center text-lg"
+                  >
+                    <i class="fa-solid fa-building-columns"></i>
+                  </span>
+                  <div>
+                    <p class="font-medium text-slate-700 dark:text-slate-200">
+                      Problem-Solving
+                    </p>
+                    <p class="text-slate-500 dark:text-slate-400">
+                      I am particularly good in identifying issues and coming up with effective solutions, even in challenging situations.
+                    </p>
+                  </div>
+                </div>
+
+                <div class="flex items-start gap-3">
+                  <span
+                    class="mt-1 h-7 w-7 rounded-xl bg-indigo-500/10 text-indigo-500 flex items-center justify-center text-lg"
+                  >
+                    <i class="fa-solid fa-person-chalkboard"></i>
+                  </span>
+                  <div>
+                    <p class="font-medium text-slate-700 dark:text-slate-200">
+                      Collaboration
+                    </p>
+                    <p class="text-slate-500 dark:text-slate-400">
+                      I excel in team environments, bringing strong interpersonal skills and a collaborative mindset to any project or group setting.
+                    </p>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Contact via Facebook only (no phone/email) -->
+            <div
+              class="rounded-3xl border border-slate-200/80 dark:border-slate-800 bg-white/80 dark:bg-slate-900/90 p-5 sm:p-6 shadow-md shadow-slate-200/70 dark:shadow-slate-900/70"
+            >
+              <h3
+                class="text-sm font-semibold mb-3 text-slate-700 dark:text-slate-200"
+              >
+                Professional Contact
+              </h3>
+              <p class="text-xs text-slate-500 dark:text-slate-400 mb-4">
+                For collaboration requests, invitations, or professional
+                opportunities, please connect through my Facebook profile
+                below.
+              </p>
+
+              <a
+                href="https://www.facebook.com/rayda.rosario.1"
+                target="_blank"
+                class="inline-flex items-center justify-center w-full rounded-full px-4 py-2.5 text-sm font-medium bg-accent text-white shadow-glow hover:scale-[1.01] hover:shadow-lg transition-transform"
+              >
+                <i class="fab fa-facebook"></i>
+                View Facebook Profile
+              </a>
+
+              <p class="text-[11px] text-slate-400 dark:text-slate-500 mt-3">
+                Direct contact details are intentionally omitted for privacy.
+                All professional communication may be initiated via Facebook.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <!-- FOOTER -->
+    <footer
+      class="border-t border-slate-200/70 dark:border-slate-800/70 py-5 text-xs text-slate-500 dark:text-slate-500"
+    >
+      <div
+        class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row justify-between gap-2 items-center"
+      >
+        <p>© <span id="year"></span> Rayda Rosario. All rights reserved.</p>
+        <p class="flex items-center gap-2">
+          <span class="hidden sm:inline"
+            >Built with HTML, CSS & Tailwind CSS</span
+          >
+          <i class="fa-solid fa-code text-accent"></i>
+        </p>
+      </div>
+    </footer>
+
+    <!-- JS: Theme toggle + scroll reveal -->
+    <script src="js/main.js"></script>
+  </body>
+</html>
